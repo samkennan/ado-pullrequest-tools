@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="options.css">
+    </head>
+    <body>
+        <div id="container">
+            <h3>ADO Pull Request Options</h3>
+            <hr>
+            
+            <div class="color-picker">
+                <input type="color" id="added-file-color" style="margin: .4rem" name="added-file-color" clicked>
+                <label id="label" for="added-file-color">Added file color</label>
+            </div>
+            
+            <div class="color-picker">
+                <input type="color" id="removed-file-color" style="margin: .4rem" name="removed-file-color">
+                <label id="label" for="removed-file-color">Removed file color</label>
+            </div>
+
+            <div class="color-picker">
+                <input type="color" id="modified-file-color" style="margin: .4rem" name="modified-file-color">
+                <label id="label" for="modified-file-color">Modified file color</label>
+            </div>
+
+            <div class="opacity-picker">
+                <input type="range" min="0" max="255" value="32" class="slider" id="opacity-slider">
+                <label id="opacity-slider-label" for="opacity-slider">Opacity</label>
+            </div>
+
+            <script src="options.js"></script>
+        </div>
+    </body>
+</html>

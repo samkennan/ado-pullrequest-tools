@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Azure DevOps Pull Request Filters",
+    "version": "0.0.1",
+    "description": "Adds some options and highlighting when viewing pull requests on Azure Dev Ops.",
+    "icons": {
+        "256": "icons/icon256.png"
+    },
+    "action": {
+        "browser_style": true,
+        "default_popup": "options/options.html"
+    },
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://msazure.visualstudio.com/*/pullrequest/*"
+            ],
+            "js": [
+                "scripts/content.js"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "https://msazure.visualstudio.com/*/pullrequest/*"
+    ],
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "scripting",
+        "storage"
+    ]
+}
